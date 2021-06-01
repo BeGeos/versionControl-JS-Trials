@@ -1,0 +1,23 @@
+const currentLine = "this section is original. Now is better";
+const savedLine = "this part is original. Now is changed....";
+
+let currentSplitLine = currentLine.split(/\s/);
+let addSavedSplitLine = savedLine.split(/\s/);
+
+let savedVersion += savedSplitLine;
+let rechangedVarName = new Array();
+
+// Removed and removed new part added just now
+currentSplitLine.forEach((word) => {
+  let index = savedVersion.indexOf(word);
+  // console.log(word, index);
+  if (index > -1) {
+    savedVersion.splice(index, 1);
+  } else {
+    added.push(word);
+  }
+});
+
+// This is a totally new part I decided to include
+
+console.log(`Removed: ${savedVersion}; Added: ${added}`);
